@@ -81,22 +81,33 @@ class GameBoard {
                     for y in 0..numRows {
                         slice += board[x + numRows * y]
                     }
+                   
+                    if pack(slice) {
+                        isGameBoardDirty = true
+                    }
+           
+                    for y in 0..numRows {
+                        board[x + numRows * y] = slice[y]
+                    }
+            }
+            
+            case .Down:
+                for x in 0..numCols
+                {
+                    var slice:Slice<Int> = []
                     
-                    printArray()
-                    println(slice)
+                    for y in 0..numRows {
+                        slice.insert(board[x + numRows * y], atIndex: 0)
+                    }
                     
                     if pack(slice) {
                         isGameBoardDirty = true
                     }
                     
-                    println(slice)
-            
                     for y in 0..numRows {
-                        board[x + numRows * y] = slice[y]
+                        board[x + numRows * y] = slice[numRows - y - 1]
                     }
-                    
-                    printArray()
-            }
+                }
             
             
             default:
@@ -126,13 +137,11 @@ class GameBoard {
                 let currentUnoccupiedValue = slice[currentFreeX]
                 
                 if currentOccupiedValue == currentValue && x != currentOccupiedX {
-                    //printArray()
                     slice[currentOccupiedX] = currentValue * 2
                     slice[x] = 0
-                    //printArray()
+                    freeTilesLeft++
                 }
                 else if x != currentFreeX && currentUnoccupiedValue == 0  {
-                    //printArray()
                     slice[currentFreeX] = currentValue
                     slice[x] = 0
                     
@@ -140,7 +149,6 @@ class GameBoard {
                     currentFreeX++
                     
                     isDirty = true
-                    //printArray()
                 }
                 else {
                     currentFreeX++

@@ -150,7 +150,8 @@ class GameScene: SKScene {
                 for x in 0..gameBoard.numCols {
                     
                     let gameValue = gameBoard.getValue(x, y: y);
-                    let node = self.children[x % gameBoard.numRows + y * gameBoard.numCols] as SKSpriteNode
+                    let position = ((x) % gameBoard.numCols) + ((gameBoard.numRows - y - 1) * gameBoard.numRows)
+                    let node = self.children[position] as SKSpriteNode
                     
                     let colour = SKAction.fadeAlphaTo(1, duration: 0)
                     node.runAction(colour)
