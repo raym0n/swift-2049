@@ -44,13 +44,6 @@ class GameScene: SKScene {
     }
     
     override func didMoveToView(view: SKView!){
-//        let background = SKSpriteNode()
-//        background.size = CGSize(width: gridWidth, height: gridHeight)
-//        background.anchorPoint = CGPoint(x: 0, y: 0)
-//        background.zPosition = -1
-//        background.position = gridLowerLeftCorner
-//        self.addChild(background)
-        
         for y in 0..gameBoard.numRows {
             for x in 0..gameBoard.numCols {
                 let tile = SKSpriteNode()
@@ -112,37 +105,56 @@ class GameScene: SKScene {
         }
     }
     
+    override func touchesMoved(touches: NSSet!, withEvent event: UIEvent!) {
+        if (selectedNode != nil) {
+            let touch = touches.anyObject() as UITouch
+            let location = touch.locationInNode(self)
+            if var node = self.nodeAtPoint(location) {
+                
+                if node is SKLabelNode {
+                    node = node.parent! as SKSpriteNode
+                }
+                
+                if (node is SKSpriteNode) {
+                    let colour = SKAction.fadeAlphaTo(0.5, duration: 0)
+                    node.runAction(colour)
+                }
+            }
+        }
+    }
+    
     override func touchesEnded(touches: NSSet!, withEvent event: UIEvent!) {
         if (selectedNode != nil){
             
             let touch = touches.anyObject() as UITouch
             let location = touch.locationInNode(self)
             
-            if let newNode = (self.nodeAtPoint(location)) {
-                if newNode != selectedNode! {
-                    let swipeHorizontal = selectedNode!.position.x - newNode.position.x
-                    let swipeVertical = selectedNode!.position.y - newNode.position.y
+            if let node = (self.nodeAtPoint(location)) {
+                    let swipeHorizontal = selectedNode!.position.x - node.position.x
+                    let swipeVertical = selectedNode!.position.y - node.position.y
                     
                     swipeDirection.updateSwipe((Int)(swipeHorizontal), y: (Int)(swipeVertical))
-                    isDirty = gameBoard.performSwipe(swipeDirection)
-                }
+                    gameBoard.performSwipe(swipeDirection)
+                    
+                    isDirty = true
+                    selectedNode = nil
             }
-            
-            let colour = SKAction.fadeAlphaTo(1, duration: 0)
-            selectedNode!.runAction(colour)
-            selectedNode = nil
         }
     }
     
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
-        if (isDirty) {
-            
+        if (isDirty)
+        {
             for y in 0..gameBoard.numRows {
                 for x in 0..gameBoard.numCols {
                     
                     let gameValue = gameBoard.getValue(x, y: y);
                     let node = self.children[x % gameBoard.numRows + y * gameBoard.numCols] as SKSpriteNode
+                    
+                    let colour = SKAction.fadeAlphaTo(1, duration: 0)
+                    node.runAction(colour)
+                    
                     let label = node.children[0] as SKLabelNode
                     
                     if (gameValue > 0)
@@ -157,8 +169,8 @@ class GameScene: SKScene {
                     node.color = colours[gameValue]
                 }
             }
-            
-            isDirty = false
         }
+        
+        isDirty = false
     }
 }

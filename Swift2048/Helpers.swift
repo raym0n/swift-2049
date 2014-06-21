@@ -28,6 +28,12 @@ enum Swipe : Printable {
     case None, Left, Right, Up, Down
     
     mutating func updateSwipe(x: Int, y: Int){
+        
+        if (abs(x) < 40 && abs(y) < 40) {
+            self = None
+            return
+        }
+        
         if abs(x) > abs(y)
         {
             self = x < 0 ? Right : Left
@@ -36,8 +42,6 @@ enum Swipe : Printable {
         {
             self = y < 0 ? Up : Down
         }
-        
-        println(self)
     }
     
     var description: String {

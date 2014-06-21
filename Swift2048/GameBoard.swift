@@ -14,6 +14,7 @@ class GameBoard {
     let initialTileValue = 2
     let board = Array<Int>()
     var freeTilesLeft = 16
+    var isGameBoardDirty = false
     
     init(){
         freeTilesLeft = numRows * numCols
@@ -49,56 +50,83 @@ class GameBoard {
     }
     
     func performSwipe(swipe: Swipe) -> Bool {
-//        switch swipe {
-//        case .Left:
-//            
-//        }
-//  
-        packLeft()
+        isGameBoardDirty = packLeft()
     
-        let result = addToBoard()
         
-        return result
+        
+        if (isGameBoardDirty) {
+            addToBoard()
+        }
+        
+        return isGameBoardDirty
     }
-    
-    func packLeft() {
+
+    func packLeft() -> Bool {
+        var isDirty = false
+        
         for y in 0..numRows
         {
-            var freeSlot = 0
+            var slice = board[(y * numRows)..(y * numCols + numCols)]
             
-            for x in 0..numCols
-            {
-                let value = board[x % numRows + y * numCols]
-                let beforeFreeSlot = max(freeSlot-1, 0)
+            println(y * numRows)
+            println(y * numCols + numCols)
+            println(slice)
+            
+            let result = packL(y, slice: slice)
+            
+            if (result){
+                isDirty = true
+            }
+        }
+        
+        return isDirty
+    }
+    
+    func packL(y: Int, slice: Slice<Int>) -> Bool {
+        
+        var isDirty = false
+        var currentFreeX = 0
+        var currentOccupiedX = 0
+        
+        for x in 0..numCols{
+            let currentValue = slice[x]
+     
+            if (currentValue > 0){
                 
-                //can we move to the freeslot?
-                if value > 0 {
-                    printArray()
-                    let leftValue = board[y * numCols + beforeFreeSlot];
+                //check last occupied
+                let currentOccupiedValue = slice[currentOccupiedX]
+                let currentUnoccupiedValue = slice[currentFreeX]
                 
-                    if beforeFreeSlot != x && leftValue == value
-                    {
-                        board[y * numCols + beforeFreeSlot] = leftValue * 2
-                        board[x % numRows + y * numCols] = 0
-                        freeTilesLeft++
-                    }
-                    else if freeSlot != x
-                    {
-                        board[y * numCols + freeSlot] = value
-                        board[x % numRows + y * numCols] = 0
-                    }
+                if currentOccupiedValue == currentValue && x != currentOccupiedX {
+                    //printArray()
+                    slice[currentOccupiedX] = currentValue * 2
+                    slice[x] = 0
+                    //printArray()
                     
-
-                    freeSlot++
-                    printArray()
+                    isDirty = true
                 }
-                else if value > 0
-                {
-                    freeSlot++
+                else if x != currentFreeX && currentUnoccupiedValue == 0  {
+                    //printArray()
+                    slice[currentFreeX] = currentValue
+                    slice[x] = 0
+                    
+                    currentOccupiedX = currentFreeX
+                    currentFreeX++
+                    
+                    isDirty = true
+                    //printArray()
+                }
+                else {
+                    currentFreeX++
+                    currentOccupiedX = x
                 }
             }
         }
+        
+        return isDirty
     }
+    
+
     
     func addToBoard() -> Bool {
         if (isGameOver()) {
