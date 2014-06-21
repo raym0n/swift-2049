@@ -172,5 +172,6 @@ class GameScene: SKScene {
         }
         
         isDirty = false
+        gameBoard.isGameBoardDirty = false
     }
 }

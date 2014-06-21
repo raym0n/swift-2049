@@ -50,9 +50,20 @@ class GameBoard {
     }
     
     func performSwipe(swipe: Swipe) -> Bool {
-        isGameBoardDirty = packLeft()
-    
-        
+        switch swipe {
+            case .Left:
+                for y in 0..numRows
+                {
+                    var slice = board[(y * numRows)..(y * numCols + numCols)]
+                    
+                    if packL(y, slice: slice) {
+                        isGameBoardDirty = true
+                    }
+                }
+            
+            default:
+                break
+        }
         
         if (isGameBoardDirty) {
             addToBoard()
@@ -61,26 +72,26 @@ class GameBoard {
         return isGameBoardDirty
     }
 
-    func packLeft() -> Bool {
-        var isDirty = false
-        
-        for y in 0..numRows
-        {
-            var slice = board[(y * numRows)..(y * numCols + numCols)]
-            
-            println(y * numRows)
-            println(y * numCols + numCols)
-            println(slice)
-            
-            let result = packL(y, slice: slice)
-            
-            if (result){
-                isDirty = true
-            }
-        }
-        
-        return isDirty
-    }
+//    func packLeft() -> Bool {
+//        var isDirty = false
+//        
+//        for y in 0..numRows
+//        {
+//            var slice = board[(y * numRows)..(y * numCols + numCols)]
+//            
+//            println(y * numRows)
+//            println(y * numCols + numCols)
+//            println(slice)
+//            
+//            let result = packL(y, slice: slice)
+//            
+//            if (result){
+//                isDirty = true
+//            }
+//        }
+//        
+//        return isDirty
+//    }
     
     func packL(y: Int, slice: Slice<Int>) -> Bool {
         
@@ -102,8 +113,6 @@ class GameBoard {
                     slice[currentOccupiedX] = currentValue * 2
                     slice[x] = 0
                     //printArray()
-                    
-                    isDirty = true
                 }
                 else if x != currentFreeX && currentUnoccupiedValue == 0  {
                     //printArray()
