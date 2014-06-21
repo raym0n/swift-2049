@@ -59,3 +59,25 @@ enum Swipe : Printable {
         }
     }
 }
+
+func combine<T>(values: T...) -> Array<T> {
+    var composition:Array<T> = []
+    
+    for value in values {
+        composition += value
+    }
+    
+    return composition
+}
+
+func combineArray<T>(arrays: Array<T>...) -> Array<T> {
+    var composition:Array<T> = []
+    
+    for array in arrays {
+        for element in array {
+            composition += element
+        }
+    }
+    
+    return composition
+}

@@ -12,7 +12,7 @@ class GameBoard {
     let numRows = 4
     let numCols = 4
     let initialTileValue = 2
-    let board = Array<Int>()
+    var board = Array<Int>()
     var freeTilesLeft = 16
     var isGameBoardDirty = false
     
@@ -56,10 +56,48 @@ class GameBoard {
                 {
                     var slice = board[(y * numRows)..(y * numCols + numCols)]
                     
-                    if packL(y, slice: slice) {
+                    if pack(slice) {
                         isGameBoardDirty = true
                     }
                 }
+            
+            case .Right:
+                for y in 0..numRows
+                {
+                    var slice = board[(y * numRows)..(y * numCols + numCols)].reverse()
+                    
+                    if pack(slice) {
+                        isGameBoardDirty = true
+                    }
+                    
+                    board[(y * numRows)..(y * numCols + numCols)] = slice.reverse()
+                }
+            
+            case .Up:
+                for x in 0..numCols
+                {
+                    var slice:Slice<Int> = []
+                    
+                    for y in 0..numRows {
+                        slice += board[x + numRows * y]
+                    }
+                    
+                    printArray()
+                    println(slice)
+                    
+                    if pack(slice) {
+                        isGameBoardDirty = true
+                    }
+                    
+                    println(slice)
+            
+                    for y in 0..numRows {
+                        board[x + numRows * y] = slice[y]
+                    }
+                    
+                    printArray()
+            }
+            
             
             default:
                 break
@@ -71,29 +109,8 @@ class GameBoard {
         
         return isGameBoardDirty
     }
-
-//    func packLeft() -> Bool {
-//        var isDirty = false
-//        
-//        for y in 0..numRows
-//        {
-//            var slice = board[(y * numRows)..(y * numCols + numCols)]
-//            
-//            println(y * numRows)
-//            println(y * numCols + numCols)
-//            println(slice)
-//            
-//            let result = packL(y, slice: slice)
-//            
-//            if (result){
-//                isDirty = true
-//            }
-//        }
-//        
-//        return isDirty
-//    }
     
-    func packL(y: Int, slice: Slice<Int>) -> Bool {
+    func pack(slice: Slice<Int>) -> Bool {
         
         var isDirty = false
         var currentFreeX = 0
