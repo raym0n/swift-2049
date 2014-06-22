@@ -9,6 +9,8 @@
 import SpriteKit
 import Darwin
 
+
+
 class GameScene: SKScene {
     let gridWidth = 200
     let gridHeight = 200
@@ -49,7 +51,7 @@ class GameScene: SKScene {
         backgroundNode.anchorPoint = CGPoint(x: 0, y: 0)
         backgroundNode.zPosition = -1
         backgroundNode.position = CGPoint(x: 0, y: 50)
-        backgroundNode.color = UIColor(red: 0.95, green: 0.5, blue: 0.5, alpha: 1)
+        backgroundNode.color = UIColor(red: 0.95, green: 0.69, blue: 0.41, alpha: 0.5)
         backgroundNode.name = "background"
         self.addChild(backgroundNode)
         
@@ -218,7 +220,7 @@ class GameScene: SKScene {
                     return
                 }
                 
-                if (!gameBoard.isGameOver())
+                if (gameBoard.isGameOver().0 == false) //game over false
                 {
                     let colour = SKAction.fadeAlphaTo(0.5, duration: 0)
                     node.runAction(colour)
@@ -259,7 +261,7 @@ class GameScene: SKScene {
                 node = node.parent as SKSpriteNode
             }
             
-            if (!gameBoard.isGameOver())
+            if (gameBoard.isGameOver().0 == false)
             {
                 if (selectedNode != nil && node is SKSpriteNode)
                 {
@@ -279,11 +281,18 @@ class GameScene: SKScene {
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
         
-        if (gameBoard.isGameOver())
+        let gameOver = gameBoard.isGameOver()
+        
+        if (gameOver.0 == true)
         {
             let footer = self.children.filter { $0.name? == "footer" }
             let label = (footer[0] as SKSpriteNode).children[0] as SKLabelNode
-            label.text = "Game Over Man! Final Score: \(gameBoard.score)"
+            
+            if gameOver.1 == GameStatus.Won {
+                label.text = "You Won!!! Final Score: \(gameBoard.score)"
+            } else {
+                label.text = "Game Over Man! Final Score: \(gameBoard.score)"
+            }
         }
         
         if (isDirty)

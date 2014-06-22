@@ -8,6 +8,10 @@
 
 import Foundation
 
+enum GameStatus {
+    case Won, Lost, InPlay
+}
+
 class GameBoard {
     let numRows = 4
     let numCols = 4
@@ -18,6 +22,7 @@ class GameBoard {
     var freeTilesLeft = 16
     var isGameBoardDirty = false
     var canUndo = false
+    var currentHighestScoringTile = 0
     var score = 0
     
     init(){
@@ -32,12 +37,19 @@ class GameBoard {
         undo = []
         canUndo = false
         score = 0
+        currentHighestScoringTile = 0
         
         addToBoard()
         addToBoard()
     }
     
-    func isGameOver() -> Bool {
+    func isGameOver() -> (Bool, GameStatus) {
+        
+        if (currentHighestScoringTile >= 2048)
+        {
+            return (true, GameStatus.Won)
+        }
+        
         if (freeTilesLeft <= 0) {
             //perform tests to see if the game can progress any further
             let left = performSwipe(Swipe.Left)
@@ -47,13 +59,13 @@ class GameBoard {
             
             if (board != left || board != right || board != up || board != down) {
                 //we can perform an action
-                return false
+                return (false, GameStatus.InPlay)
             }
             
-            return true
+            return (true, GameStatus.Lost)
         }
         
-        return false
+        return (false, GameStatus.InPlay)
     }
     
     func getValue(x: Int, y: Int) -> Int {
@@ -86,6 +98,7 @@ class GameBoard {
     func performSwipe(swipe: Swipe) -> Bool {
         println(swipe)
         
+        
         let newBoard = doSwipeAction(swipe)
         
         if (newBoard != board) {
@@ -98,6 +111,8 @@ class GameBoard {
         if (isGameBoardDirty) {
             addToBoard()
         }
+        
+        println(freeTilesLeft)
         
         return isGameBoardDirty
     }
@@ -189,10 +204,12 @@ class GameBoard {
                 
                 if currentOccupiedValue == currentValue && x != currentOccupiedX {
                     
-                    score += currentValue
                     
                     slice[currentOccupiedX] = currentValue * 2
                     slice[x] = 0
+                    
+                    score += currentValue * 2
+                    currentHighestScoringTile = currentValue * 2
                     
                     freeTilesLeft++
                     
