@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Swift2048/GameViewController.swift"
-            timestampString = "424697724.393187"
+            timestampString = "425116979.828682"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
             landmarkName = "viewWillAppear(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Swift2048/GameViewController.swift"
-            timestampString = "424697724.393187"
+            timestampString = "425116979.828682"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
             landmarkName = "viewWillAppear(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Swift2048/GameScene.swift"
-            timestampString = "425029274.698756"
+            timestampString = "425107850.323403"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
             landmarkName = "init(sceneSize:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -58,13 +58,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Swift2048/GameScene.swift"
-            timestampString = "425029274.698756"
+            timestampString = "425116768.616054"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "AddLabel(_:)"
-            landmarkType = "5">
+            startingLineNumber = "177"
+            endingLineNumber = "177"
+            landmarkName = "GameScene"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Swift2048/GameScene.swift"
-            timestampString = "425029274.698756"
+            timestampString = "425116768.616054"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
+            startingLineNumber = "196"
+            endingLineNumber = "196"
             landmarkName = "touchesBegan(_:withEvent:)"
             landmarkType = "5">
             <Locations>
@@ -88,13 +88,13 @@
                   continueAfterRunningActions = "No"
                   symbolName = "Swift2048.GameScene.touchesBegan (Swift2048.GameScene)(Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.NSSet&gt;, withEvent : Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UIEvent&gt;) -&gt; ()"
                   moduleName = "Swift2048"
-                  urlString = "file:///Users/petersbarski/Programming/swift/Swift2048/Swift2048/GameScene.swift"
-                  timestampString = "424959413.443771"
+                  urlString = "file:///Users/petersbarski/Programming/swift-2048/Swift2048/GameScene.swift"
+                  timestampString = "425115876.118171"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "101"
-                  endingLineNumber = "101"
-                  offsetFromSymbolStart = "717">
+                  startingLineNumber = "179"
+                  endingLineNumber = "179"
+                  offsetFromSymbolStart = "252">
                </Location>
                <Location
                   shouldBeEnabled = "No"
@@ -102,13 +102,13 @@
                   continueAfterRunningActions = "No"
                   symbolName = "Swift2048.GameScene.touchesBegan (Swift2048.GameScene)(Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.NSSet&gt;, withEvent : Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UIEvent&gt;) -&gt; ()"
                   moduleName = "Swift2048"
-                  urlString = "file:///Users/petersbarski/Programming/swift/Swift2048/Swift2048/GameScene.swift"
-                  timestampString = "424959413.443937"
+                  urlString = "file:///Users/petersbarski/Programming/swift-2048/Swift2048/GameScene.swift"
+                  timestampString = "425115876.118457"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "101"
-                  endingLineNumber = "101"
-                  offsetFromSymbolStart = "2007">
+                  startingLineNumber = "179"
+                  endingLineNumber = "179"
+                  offsetFromSymbolStart = "492">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -120,11 +120,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Swift2048/GameScene.swift"
-            timestampString = "425029274.698756"
+            timestampString = "425116768.616054"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
+            startingLineNumber = "194"
+            endingLineNumber = "194"
             landmarkName = "touchesBegan(_:withEvent:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -136,28 +136,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Swift2048/GameBoard.swift"
-            timestampString = "425028322.726203"
+            timestampString = "425110638.573139"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "isGameOver()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Swift2048/GameScene.swift"
-            timestampString = "425029274.698756"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
-            landmarkName = "touchesBegan(_:withEvent:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -184,11 +168,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Swift2048/GameBoard.swift"
-            timestampString = "425054275.432149"
+            timestampString = "425117225.926829"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "136"
-            endingLineNumber = "136"
+            startingLineNumber = "187"
+            endingLineNumber = "187"
             landmarkName = "pack(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -200,11 +184,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Swift2048/GameBoard.swift"
-            timestampString = "425054275.432149"
+            timestampString = "425117225.926829"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
             landmarkName = "performSwipe(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -216,11 +200,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Swift2048/GameBoard.swift"
-            timestampString = "425054275.432149"
+            timestampString = "425117225.926829"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "121"
-            endingLineNumber = "121"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
             landmarkName = "performSwipe(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -232,11 +216,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Swift2048/GameBoard.swift"
-            timestampString = "425054275.432149"
+            timestampString = "425117225.926829"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
             landmarkName = "performSwipe(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -248,57 +232,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Swift2048/GameBoard.swift"
-            timestampString = "425054275.432149"
+            timestampString = "425117225.926829"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "160"
-            endingLineNumber = "160"
-            landmarkName = "pack(_:)"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Swift2048.GameBoard.packL (Swift2048.GameBoard)(Swift.Int) -&gt; Swift.Bool"
-                  moduleName = "Swift2048"
-                  urlString = "file:///Users/petersbarski/Programming/swift-2048/Swift2048/GameBoard.swift"
-                  timestampString = "425027733.202541"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "101"
-                  endingLineNumber = "101"
-                  offsetFromSymbolStart = "3289">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Swift2048.GameBoard.packL (Swift2048.GameBoard)(Swift.Int) -&gt; Swift.Bool"
-                  moduleName = "Swift2048"
-                  urlString = "file:///Users/petersbarski/Programming/swift-2048/Swift2048/GameBoard.swift"
-                  timestampString = "425027733.202738"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "101"
-                  endingLineNumber = "101"
-                  offsetFromSymbolStart = "3292">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Swift2048/GameBoard.swift"
-            timestampString = "425054275.432149"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "140"
-            endingLineNumber = "140"
+            startingLineNumber = "193"
+            endingLineNumber = "193"
             landmarkName = "pack(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -310,11 +248,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Swift2048/GameBoard.swift"
-            timestampString = "425054275.432149"
+            timestampString = "425117225.926829"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146"
+            startingLineNumber = "203"
+            endingLineNumber = "203"
             landmarkName = "pack(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -326,11 +264,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Swift2048/GameBoard.swift"
-            timestampString = "425054275.432149"
+            timestampString = "425117225.926829"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
+            startingLineNumber = "202"
+            endingLineNumber = "202"
             landmarkName = "pack(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -342,27 +280,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Swift2048/GameScene.swift"
-            timestampString = "425031699.275986"
+            timestampString = "425117040.808508"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
-            landmarkName = "touchesEnded(_:withEvent:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Swift2048/GameScene.swift"
-            timestampString = "425052623.917127"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "150"
-            endingLineNumber = "150"
+            startingLineNumber = "293"
+            endingLineNumber = "293"
             landmarkName = "update(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -374,11 +296,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Swift2048/GameBoard.swift"
-            timestampString = "425054275.432149"
+            timestampString = "425117225.926829"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
+            startingLineNumber = "176"
+            endingLineNumber = "176"
             landmarkName = "pack(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -390,89 +312,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Swift2048/GameBoard.swift"
-            timestampString = "425054275.432149"
+            timestampString = "425117225.926829"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
-            landmarkName = "pack(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Swift2048/GameScene.swift"
-            timestampString = "425031699.275986"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
-            landmarkName = "touchesEnded(_:withEvent:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Swift2048/GameScene.swift"
-            timestampString = "425031616.821974"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
-            landmarkName = "touchesEnded(_:withEvent:)"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Swift2048.GameScene.touchesEnded (Swift2048.GameScene)(Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.NSSet&gt;, withEvent : Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UIEvent&gt;) -&gt; ()"
-                  moduleName = "Swift2048"
-                  urlString = "file:///Users/petersbarski/Programming/swift-2048/Swift2048/GameScene.swift"
-                  timestampString = "425031699.66296"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "129"
-                  endingLineNumber = "129"
-                  offsetFromSymbolStart = "169">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Swift2048.GameScene.touchesEnded (Swift2048.GameScene)(Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.NSSet&gt;, withEvent : Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UIEvent&gt;) -&gt; ()"
-                  moduleName = "Swift2048"
-                  urlString = "file:///Users/petersbarski/Programming/swift-2048/Swift2048/GameScene.swift"
-                  timestampString = "425031699.663175"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "129"
-                  endingLineNumber = "129"
-                  offsetFromSymbolStart = "409">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Swift2048/GameBoard.swift"
-            timestampString = "425054275.432149"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "130"
-            endingLineNumber = "130"
+            startingLineNumber = "181"
+            endingLineNumber = "181"
             landmarkName = "pack(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -484,11 +328,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Swift2048/GameBoard.swift"
-            timestampString = "425054275.432149"
+            timestampString = "425117225.926829"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "131"
-            endingLineNumber = "131"
+            startingLineNumber = "182"
+            endingLineNumber = "182"
             landmarkName = "pack(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -500,11 +344,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Swift2048/GameBoard.swift"
-            timestampString = "425054275.432149"
+            timestampString = "425117225.926829"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
+            startingLineNumber = "190"
+            endingLineNumber = "190"
             landmarkName = "pack(_:)"
             landmarkType = "5">
             <Locations>
@@ -545,13 +389,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Swift2048/GameBoard.swift"
-            timestampString = "425051835.886374"
+            filePath = "Swift2048/GameScene.swift"
+            timestampString = "425117101.883316"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "performSwipe(_:)"
+            startingLineNumber = "325"
+            endingLineNumber = "325"
+            landmarkName = "update(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -561,13 +405,135 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
+            filePath = "Swift2048/GameScene.swift"
+            timestampString = "425117040.808508"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "292"
+            endingLineNumber = "292"
+            landmarkName = "update(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Swift2048/GameScene.swift"
+            timestampString = "425117040.808508"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "291"
+            endingLineNumber = "291"
+            landmarkName = "update(_:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Swift2048.GameScene.update (Swift2048.GameScene)(Swift.Double) -&gt; ()"
+                  moduleName = "Swift2048"
+                  urlString = "file:///Users/petersbarski/Programming/swift-2048/Swift2048/GameScene.swift"
+                  timestampString = "425109728.168162"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "229"
+                  endingLineNumber = "229"
+                  offsetFromSymbolStart = "110">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Swift2048.GameScene.(update (Swift2048.GameScene) -&gt; (Swift.Double) -&gt; ()).(closure #1)"
+                  moduleName = "Swift2048"
+                  urlString = "file:///Users/petersbarski/Programming/swift-2048/Swift2048/GameScene.swift"
+                  timestampString = "425109728.168454"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "229"
+                  endingLineNumber = "229"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reabstraction thunk helper from @callee_owned () -&gt; (@autoreleased Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.NSString&gt;) to @callee_owned () -&gt; (@owned Swift.ImplicitlyUnwrappedOptional&lt;Swift.String&gt;)"
+                  moduleName = "Swift2048"
+                  urlString = "file:///Users/petersbarski/Programming/swift-2048/Swift2048/GameScene.swift"
+                  timestampString = "425109728.168885"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "229"
+                  endingLineNumber = "229"
+                  offsetFromSymbolStart = "22">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Swift2048/GameScene.swift"
+            timestampString = "425116768.616054"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "259"
+            endingLineNumber = "259"
+            landmarkName = "touchesEnded(_:withEvent:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Swift2048.GameScene.touchesEnded (Swift2048.GameScene)(Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.NSSet&gt;, withEvent : Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UIEvent&gt;) -&gt; ()"
+                  moduleName = "Swift2048"
+                  urlString = "file:///Users/petersbarski/Programming/swift-2048/Swift2048/GameScene.swift"
+                  timestampString = "425110638.865006"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "217"
+                  endingLineNumber = "217"
+                  offsetFromSymbolStart = "1131">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Swift2048.GameScene.touchesEnded (Swift2048.GameScene)(Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.NSSet&gt;, withEvent : Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UIEvent&gt;) -&gt; ()"
+                  moduleName = "Swift2048"
+                  urlString = "file:///Users/petersbarski/Programming/swift-2048/Swift2048/GameScene.swift"
+                  timestampString = "425110638.865146"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "217"
+                  endingLineNumber = "217"
+                  offsetFromSymbolStart = "1272">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
             filePath = "Swift2048/GameBoard.swift"
-            timestampString = "425051848.191287"
+            timestampString = "425116751.032892"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "78"
             endingLineNumber = "78"
-            landmarkName = "performSwipe(_:)"
+            landmarkName = "performUndo()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -578,12 +544,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Swift2048/GameScene.swift"
-            timestampString = "425053586.025619"
+            timestampString = "425116768.616054"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "175"
-            endingLineNumber = "175"
-            landmarkName = "update(_:)"
+            startingLineNumber = "192"
+            endingLineNumber = "192"
+            landmarkName = "touchesBegan(_:withEvent:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -593,13 +559,29 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Swift2048/GameScene.swift"
-            timestampString = "425053121.737708"
+            filePath = "Swift2048/GameBoard.swift"
+            timestampString = "425117290.65714"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "149"
-            endingLineNumber = "149"
-            landmarkName = "update(_:)"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "performUndo()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Swift2048/GameBoard.swift"
+            timestampString = "425117291.165336"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "performUndo()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

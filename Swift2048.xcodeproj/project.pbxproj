@@ -16,6 +16,8 @@
 		CB2EB32319504A2400AC8092 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB2EB32219504A2400AC8092 /* Images.xcassets */; };
 		CB2EB32F19504A2400AC8092 /* Swift2048Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2EB32E19504A2400AC8092 /* Swift2048Tests.swift */; };
 		CBAD5B6A195077F70054203F /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAD5B69195077F70054203F /* Helpers.swift */; };
+		CBB94BA4195699F9001F455E /* Undo.png in Resources */ = {isa = PBXBuildFile; fileRef = CBB94BA3195699F9001F455E /* Undo.png */; };
+		CBB94BA619569E05001F455E /* Start.png in Resources */ = {isa = PBXBuildFile; fileRef = CBB94BA519569E05001F455E /* Start.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		CB2EB32D19504A2400AC8092 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB2EB32E19504A2400AC8092 /* Swift2048Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift2048Tests.swift; sourceTree = "<group>"; };
 		CBAD5B69195077F70054203F /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		CBB94BA3195699F9001F455E /* Undo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Undo.png; sourceTree = "<group>"; };
+		CBB94BA519569E05001F455E /* Start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Start.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 		CB2EB31419504A2400AC8092 /* Swift2048 */ = {
 			isa = PBXGroup;
 			children = (
+				CBB94BA2195699DB001F455E /* Assets */,
 				CB2EB31719504A2400AC8092 /* AppDelegate.swift */,
 				CB2EB31919504A2400AC8092 /* GameScene.sks */,
 				CB2EB31B19504A2400AC8092 /* GameScene.swift */,
@@ -119,6 +124,15 @@
 				CB2EB32D19504A2400AC8092 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CBB94BA2195699DB001F455E /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				CBB94BA519569E05001F455E /* Start.png */,
+				CBB94BA3195699F9001F455E /* Undo.png */,
+			);
+			name = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,9 +215,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBB94BA4195699F9001F455E /* Undo.png in Resources */,
 				CB2EB32319504A2400AC8092 /* Images.xcassets in Resources */,
 				CB2EB31A19504A2400AC8092 /* GameScene.sks in Resources */,
 				CB2EB32119504A2400AC8092 /* Main.storyboard in Resources */,
+				CBB94BA619569E05001F455E /* Start.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

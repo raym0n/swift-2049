@@ -18,8 +18,6 @@ class GameViewController: UIViewController {
         super.viewWillAppear(animated)
         
         scene = GameScene(sceneSize: self.skView.bounds.size)
-        self.skView.showsFPS = true
-        self.skView.showsNodeCount = true
         self.skView.ignoresSiblingOrder = true
         
         self.skView.presentScene(scene)

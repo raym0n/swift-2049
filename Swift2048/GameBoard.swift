@@ -12,14 +12,26 @@ class GameBoard {
     let numRows = 4
     let numCols = 4
     let initialTileValue = 2
+    
+    var undo = Array<Int>()
     var board = Array<Int>()
     var freeTilesLeft = 16
     var isGameBoardDirty = false
+    var canUndo = false
+    var score = 0
     
     init(){
+        startGame()
+    }
+    
+    func startGame() {
         freeTilesLeft = numRows * numCols
-
+        
         board = Array(count: freeTilesLeft, repeatedValue: 0)
+        
+        undo = []
+        canUndo = false
+        score = 0
         
         addToBoard()
         addToBoard()
@@ -27,6 +39,17 @@ class GameBoard {
     
     func isGameOver() -> Bool {
         if (freeTilesLeft <= 0) {
+            //perform tests to see if the game can progress any further
+            let left = performSwipe(Swipe.Left)
+            let right = performSwipe(Swipe.Right)
+            let up = performSwipe(Swipe.Up)
+            let down = performSwipe(Swipe.Down)
+            
+            if (board != left || board != right || board != up || board != down) {
+                //we can perform an action
+                return false
+            }
+            
             return true
         }
         
@@ -49,71 +72,29 @@ class GameBoard {
         }
     }
     
+    func performUndo() {
+        
+        if (canUndo) {
+            board = undo.copy()
+            undo = []
+            
+            canUndo = false
+            isGameBoardDirty = true
+        }
+    }
+    
     func performSwipe(swipe: Swipe) -> Bool {
-        switch swipe {
-            case .Left:
-                for y in 0..numRows
-                {
-                    var slice = board[(y * numRows)..(y * numCols + numCols)]
-                    
-                    if pack(slice) {
-                        isGameBoardDirty = true
-                    }
-                }
-            
-            case .Right:
-                for y in 0..numRows
-                {
-                    var slice = board[(y * numRows)..(y * numCols + numCols)].reverse()
-                    
-                    if pack(slice) {
-                        isGameBoardDirty = true
-                    }
-                    
-                    board[(y * numRows)..(y * numCols + numCols)] = slice.reverse()
-                }
-            
-            case .Up:
-                for x in 0..numCols
-                {
-                    var slice:Slice<Int> = []
-                    
-                    for y in 0..numRows {
-                        slice += board[x + numRows * y]
-                    }
-                   
-                    if pack(slice) {
-                        isGameBoardDirty = true
-                    }
-           
-                    for y in 0..numRows {
-                        board[x + numRows * y] = slice[y]
-                    }
-            }
-            
-            case .Down:
-                for x in 0..numCols
-                {
-                    var slice:Slice<Int> = []
-                    
-                    for y in 0..numRows {
-                        slice.insert(board[x + numRows * y], atIndex: 0)
-                    }
-                    
-                    if pack(slice) {
-                        isGameBoardDirty = true
-                    }
-                    
-                    for y in 0..numRows {
-                        board[x + numRows * y] = slice[numRows - y - 1]
-                    }
-                }
-            
-            
-            default:
-                break
+        println(swipe)
+        
+        let newBoard = doSwipeAction(swipe)
+        
+        if (newBoard != board) {
+            undo = board
+            canUndo = true
         }
         
+        board = newBoard
+
         if (isGameBoardDirty) {
             addToBoard()
         }
@@ -121,9 +102,79 @@ class GameBoard {
         return isGameBoardDirty
     }
     
-    func pack(slice: Slice<Int>) -> Bool {
+    func doSwipeAction(swipe: Swipe) -> Array<Int> {
         
-        var isDirty = false
+        var copy = board.copy()
+        
+        switch swipe {
+        case .Left:
+            for y in 0..numRows
+            {
+                var slice = copy[(y * numRows)..(y * numCols + numCols)]
+                
+                pack(slice)
+                
+                copy[(y * numRows)..(y * numCols + numCols)] = slice
+            }
+            
+        case .Right:
+            for y in 0..numRows
+            {
+                var slice:Slice<Int> = []
+                
+                for x in 0..numCols {
+                    slice.insert(copy[y*numCols + x], atIndex: 0)
+                }
+                
+                pack(slice)
+                
+                for x in 0..numCols {
+                    copy[y*numCols + x] = slice[numCols - x - 1]
+                }
+            }
+            
+        case .Up:
+            for x in 0..numCols
+            {
+                var slice:Slice<Int> = []
+                
+                for y in 0..numRows {
+                    slice += copy[x + numRows * y]
+                }
+                
+                pack(slice)
+                
+                for y in 0..numRows {
+                    copy[x + numRows * y] = slice[y]
+                }
+            }
+            
+        case .Down:
+            for x in 0..numCols
+            {
+                var slice:Slice<Int> = []
+                
+                for y in 0..numRows {
+                    slice.insert(copy[x + numRows * y], atIndex: 0)
+                }
+                
+                pack(slice)
+                
+                for y in 0..numRows {
+                    copy[x + numRows * y] = slice[numRows - y - 1]
+                }
+            }
+            
+            
+        default:
+            break
+        }
+        
+        return copy
+    }
+    
+    func pack(slice: Slice<Int>) {
+
         var currentFreeX = 0
         var currentOccupiedX = 0
         
@@ -137,9 +188,15 @@ class GameBoard {
                 let currentUnoccupiedValue = slice[currentFreeX]
                 
                 if currentOccupiedValue == currentValue && x != currentOccupiedX {
+                    
+                    score += currentValue
+                    
                     slice[currentOccupiedX] = currentValue * 2
                     slice[x] = 0
+                    
                     freeTilesLeft++
+                    
+                    isGameBoardDirty = true
                 }
                 else if x != currentFreeX && currentUnoccupiedValue == 0  {
                     slice[currentFreeX] = currentValue
@@ -148,7 +205,7 @@ class GameBoard {
                     currentOccupiedX = currentFreeX
                     currentFreeX++
                     
-                    isDirty = true
+                    isGameBoardDirty = true
                 }
                 else {
                     currentFreeX++
@@ -156,14 +213,12 @@ class GameBoard {
                 }
             }
         }
-        
-        return isDirty
     }
     
 
     
     func addToBoard() -> Bool {
-        if (isGameOver()) {
+        if (freeTilesLeft <= 0) {
             return false
         }
         
