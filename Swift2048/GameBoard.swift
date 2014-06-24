@@ -97,6 +97,7 @@ class GameBoard {
     
     func performSwipe(swipe: Swipe) -> Bool {
         println(swipe)
+        println("tiles left: \(freeTilesLeft)")
         
         
         let newBoard = doSwipeAction(swipe)
@@ -250,7 +251,7 @@ class GameBoard {
             }
         }
         
-        for i in 0..freeTilesLeft {
+        for i in 0..board.count {
             if board[i] == 0 {
                 board[i] = initialTileValue
                 freeTilesLeft--;
